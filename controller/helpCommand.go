@@ -3,10 +3,16 @@ package controller
 import "fmt"
 
 var commands = []string{
-	"help    - Show available commands",
-	"list    - List all tasks",
-	"add     - Add a new task",
-	"delete  - Mark a task as complete",
+	`help    
+	- Show available commands`,
+	`list    
+	- List all tasks`,
+	`add [id] <title> <description>
+	- Add a new task`,
+	`delete <id>
+	- Delete task by id`,
+	`complete <id>
+	- Mark a task as complete`,
 }
 
 func ShowHelp() {
