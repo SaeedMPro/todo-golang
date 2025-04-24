@@ -7,11 +7,12 @@ import (
 	"os"
 	"time"
 
+	"github.com/SaeedMPro/todo-list/controller"
 	"github.com/SaeedMPro/todo-list/model"
 )
 
 var (
-	tasks []model.Task
+	tasks   []model.Task
 	command []string
 )
 
@@ -39,19 +40,20 @@ func main() {
 		fmt.Println("No command provided. Try 'help' to see available commands.")
 		return
 	}
-	
+
 	switch command[0] {
 	case "help":
-		// TODO: print help
-	case "show":
+		controller.ShowHelp()
+	case "list":
 		// TODO: show tasks
 	case "add":
 		// TODO: add task
 	case "delete":
 		// TODO: delete task
+	case "complete":
+		// TODO
 	default:
 		fmt.Printf("The command '%s' is not valid. Try 'help'.\n", command[0])
 		os.Exit(1)
 	}
 }
-
