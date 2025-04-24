@@ -23,6 +23,8 @@ A simple command-line todo list manager written in Go, featuring persistent stor
 git clone https://github.com/SaeedMPro/todo-list.git
 cd todo-list
 go build -o todo main.go
+
+#for linux user
 sudo mv todo /usr/local/bin/
 ```
 
@@ -47,7 +49,7 @@ Available commands:
 
 ### Examples
 
-```bash
+```
 # Show help
 todo help
 
