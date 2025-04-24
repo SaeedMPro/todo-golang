@@ -15,8 +15,9 @@ func DeleteTaskByID(tasks *[]model.Task, id int) error {
 	for idx, t := range *tasks {
 		if t.ID == id {
 			*tasks = append((*tasks)[:idx], (*tasks)[idx+1:]...)
+			fmt.Printf("Task with id <%d> deleted successfully", id)
 			return nil
 		}
 	}
-	return fmt.Errorf("task with id %d not found", id)
+	return fmt.Errorf("task with id <%d> not found", id)
 }
