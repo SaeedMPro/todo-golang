@@ -1,16 +1,8 @@
 package model
 
 type Task struct {
-	Id          int    `json:"id"`
+	ID          int    `json:"id"`
 	Title       string `json:"title"`
-	Description string `json:"explanation"`
+	Description string `json:"description"`
 	IsDone      bool   `json:"isDone"`
-}
-
-func (t Task) GetTitle() string {
-	return t.Title
-}
-
-func (t Task) GetExplanation() string {
-	return t.Description
 }
